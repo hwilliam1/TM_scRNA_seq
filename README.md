@@ -1,2 +1,11 @@
 # TM_scRNA_seq
 Tabula Muris project - Single Cell RNA-seq analysis on mice brain cell data
+
+Brief summary:
+The Tabula Muris project is an ambitious initiative to collect and sequence single-cell transcriptome data from all mouse tissues and organs. The goal is to directly compare the gene expression in different cell types and seek genes expressed similarly between tissues. From this collection of data, researchers can define and characterize cell populations that have not been well-annotated so far, validate findings in future targeted single-cell studies, and develop methods for integrating these datasets, a series of tasks that will be beneficial for quantifying variation of gene expression in other cell types between organs and animals . For the final project, our class selected the brain data from the Tabula Muris project, and I analyzed them by using the framework tutorials on the Google Colab notebooks.
+
+To begin with, the brain cell data was first loaded onto the notebook, cleaned, and dimensionally reduced as parts of the data pre-processing steps. Individual cells were grouped by dimension reduction algorithm based on their gene expression level, and cells that were similar were clustered together, whereas cells that were different were pushed further apart. 
+
+Once the data was dimensionally reduced, the clustering algorithm helped researchers identify a cluster of the cells that all the observations within this cluster were similar to one another than to other clusters. The outcome clusters were largely consistent with the labels, but the exact orientation of the t-SNE plots was different, and every time a new t-SNE plot was generated. There were also cells/clusters that were not labeled, so clustering could help identify rare cell populations and label new cells. 
+
+After clustering, differentially expressed genes could be determined based on special differences between the clusters. After coloring and literature search, I found that Acta2, a marker highly expressed in mural cells derived from arterioles, was also highly expressed in a cluster on the right of the t-SNE plot and consistent with the label brain pericytes, which are mural cells of blood microvessels.
